@@ -1,20 +1,11 @@
 package com.stayready.hbcu;
 
-public class Caser {
-    public static Character invertCasing(Character character) {
-        if (Character.isUpperCase(character)) {
-            return character.toString().toLowerCase().charAt(0);
-        } else {
-            return character.toString().toUpperCase().charAt(0);
-        }
-    }
-
-
+public class BasicCaser {
     /**
      * @param stringToBeEvaluated - The string to be manipulated by the aglorithm
      * @return identical string with oscillating casing
      */
-    public static String camelCase(String stringToBeEvaluated) {
+    public  String camelCase(String stringToBeEvaluated) {
         StringBuilder sb = new StringBuilder();
         stringToBeEvaluated = stringToBeEvaluated.toLowerCase();
         String[] characters = stringToBeEvaluated.split("");
@@ -36,7 +27,4 @@ public class Caser {
         return sb.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println(camelCase("The quick brown fox"));
-    }
 }
