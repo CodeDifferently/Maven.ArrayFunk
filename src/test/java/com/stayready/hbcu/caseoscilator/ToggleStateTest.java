@@ -8,32 +8,31 @@ import org.junit.Test;
 public class ToggleStateTest {
     @Test
     public void test1() {
-        test(CaseOscillatorState.UPPERCASE, "waltz bad nymph for quick jigs vex");
+        test("waltz bad nymph for quick jigs vex");
     }
 
     @Test
     public void test2() {
-        test(CaseOscillatorState.UPPERCASE, "sphinx of black quartz, judge my vow.");
+        test("sphinx of black quartz, judge my vow.");
     }
 
     @Test
     public void test3() {
-        test(CaseOscillatorState.UPPERCASE, "the quick brown fox jumps over the lazy dog");
+        test("the quick brown fox jumps over the lazy dog");
     }
 
 
-
-    private void test(CaseOscillatorState expectedState, String expectedStringToBeEvaluated) {
+    private void test(String expectedStringToBeEvaluated) {
         // given
         CaseOscillator caseOscillator = new CaseOscillator(expectedStringToBeEvaluated);
-
+        CaseOscillatorState expectedInitialState = CaseOscillatorState.LOWERCASE;
+        CaseOscillatorState actualInitialState = caseOscillator.getState();
+        Assert.assertEquals(expectedInitialState, actualInitialState);
+        caseOscillator.toggleState();
 
         // when
-        String actualStringToBeEvaluated = caseOscillator.getStringToBeEvaluated();
+        CaseOscillatorState expectedState = CaseOscillatorState.UPPERCASE;
         CaseOscillatorState actualState = caseOscillator.getState();
-
-        // then
-        Assert.assertEquals(expectedStringToBeEvaluated, actualStringToBeEvaluated);
         Assert.assertEquals(expectedState, actualState);
     }
 }

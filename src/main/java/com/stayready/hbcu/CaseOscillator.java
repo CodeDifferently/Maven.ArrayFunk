@@ -5,17 +5,11 @@ public class CaseOscillator {
     private final String stringToBeEvaluated;
 
     /**
-     *
-     * @param state
      * @param stringToBeEvaluated - The string to be manipulated by the algorithm
      */
-    public CaseOscillator(CaseOscillatorState state, String stringToBeEvaluated) {
-        this.state = state;
-        this.stringToBeEvaluated = stringToBeEvaluated;
-    }
-
     public CaseOscillator(String stringToBeEvaluated) {
-        this(CaseOscillatorState.LOWERCASE, stringToBeEvaluated);
+        this.state = CaseOscillatorState.LOWERCASE;
+        this.stringToBeEvaluated = stringToBeEvaluated;
     }
 
     public CaseOscillatorState getState() {

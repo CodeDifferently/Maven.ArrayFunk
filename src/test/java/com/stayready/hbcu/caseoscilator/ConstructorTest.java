@@ -5,27 +5,31 @@ import com.stayready.hbcu.CaseOscillatorState;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MultiArgumentConstructorTest {
+public class ConstructorTest {
     @Test
     public void test1() {
-        test(CaseOscillatorState.UPPERCASE, "waltz bad nymph for quick jigs vex");
+        // given
+        test("the quick brown fox jumps over the lazy dog");
     }
+
 
     @Test
     public void test2() {
-        test(CaseOscillatorState.UPPERCASE, "sphinx of black quartz, judge my vow.");
+        // given
+        test("waltz bad nymph for quick jigs vex");
     }
 
     @Test
     public void test3() {
-        test(CaseOscillatorState.UPPERCASE, "the quick brown fox jumps over the lazy dog");
+        // given
+        test("sphinx of black quartz, judge my vow.");
     }
 
 
-
-    private void test(CaseOscillatorState expectedState, String expectedStringToBeEvaluated) {
+    private void test(String expectedStringToBeEvaluated) {
         // given
         CaseOscillator caseOscillator = new CaseOscillator(expectedStringToBeEvaluated);
+        CaseOscillatorState expectedState = CaseOscillatorState.LOWERCASE;
 
 
         // when
