@@ -1,5 +1,6 @@
 package com.stayready.hbcu;
 
+
 public class CaseOscillator {
     private CaseOscillatorState state;
     private final String stringToBeEvaluated;

@@ -9,20 +9,20 @@ public class InvertCasingTest {
     @Test
     public void test1() {
         // given
-        test("the quick brown fox jumps over the lazy dog");
+        test('a', CaseOscillatorState.LOWERCASE);
     }
 
 
     @Test
     public void test2() {
         // given
-        test("waltz bad nymph for quick jigs vex");
+        test('B', CaseOscillatorState.UPPERCASE);
     }
 
     @Test
     public void test3() {
         // given
-        test("sphinx of black quartz, judge my vow.");
+        test('c', CaseOscillatorState.LOWERCASE);
     }
 
 
