@@ -1,7 +1,7 @@
 package com.stayready.hbcu.caseoscillator;
 
 import com.stayready.hbcu.CaseOscillator;
-import com.stayready.hbcu.CaseOscillatorState;
+import com.stayready.hbcu.OscillationState;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,12 +29,12 @@ public class ConstructorTest {
     private void test(String expectedStringToBeEvaluated) {
         // given
         CaseOscillator caseOscillator = new CaseOscillator(expectedStringToBeEvaluated);
-        CaseOscillatorState expectedState = CaseOscillatorState.LOWERCASE;
+        OscillationState expectedState = OscillationState.LOWERCASE;
 
 
         // when
         String actualStringToBeEvaluated = caseOscillator.getStringToBeEvaluated();
-        CaseOscillatorState actualState = caseOscillator.getState();
+        OscillationState actualState = caseOscillator.getState();
 
         // then
         Assert.assertEquals(expectedStringToBeEvaluated, actualStringToBeEvaluated);

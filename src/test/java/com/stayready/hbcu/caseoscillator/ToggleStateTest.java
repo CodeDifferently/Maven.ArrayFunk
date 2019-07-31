@@ -1,7 +1,7 @@
 package com.stayready.hbcu.caseoscillator;
 
 import com.stayready.hbcu.CaseOscillator;
-import com.stayready.hbcu.CaseOscillatorState;
+import com.stayready.hbcu.OscillationState;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,14 +25,14 @@ public class ToggleStateTest {
     private void test(String expectedStringToBeEvaluated) {
         // given
         CaseOscillator caseOscillator = new CaseOscillator(expectedStringToBeEvaluated);
-        CaseOscillatorState expectedInitialState = CaseOscillatorState.LOWERCASE;
-        CaseOscillatorState actualInitialState = caseOscillator.getState();
+        OscillationState expectedInitialState = OscillationState.LOWERCASE;
+        OscillationState actualInitialState = caseOscillator.getState();
         Assert.assertEquals(expectedInitialState, actualInitialState);
         caseOscillator.toggleState();
 
         // when
-        CaseOscillatorState expectedState = CaseOscillatorState.UPPERCASE;
-        CaseOscillatorState actualState = caseOscillator.getState();
+        OscillationState expectedState = OscillationState.UPPERCASE;
+        OscillationState actualState = caseOscillator.getState();
         Assert.assertEquals(expectedState, actualState);
     }
 }
