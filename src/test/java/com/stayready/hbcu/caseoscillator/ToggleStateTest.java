@@ -1,43 +1,38 @@
-package com.stayready.hbcu.caseoscilator;
+package com.stayready.hbcu.caseoscillator;
 
 import com.stayready.hbcu.CaseOscillator;
 import com.stayready.hbcu.CaseOscillatorState;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ConstructorTest {
+public class ToggleStateTest {
     @Test
     public void test1() {
-        // given
-        test("the quick brown fox jumps over the lazy dog");
-    }
-
-
-    @Test
-    public void test2() {
-        // given
         test("waltz bad nymph for quick jigs vex");
     }
 
     @Test
-    public void test3() {
-        // given
+    public void test2() {
         test("sphinx of black quartz, judge my vow.");
+    }
+
+    @Test
+    public void test3() {
+        test("the quick brown fox jumps over the lazy dog");
     }
 
 
     private void test(String expectedStringToBeEvaluated) {
         // given
         CaseOscillator caseOscillator = new CaseOscillator(expectedStringToBeEvaluated);
-        CaseOscillatorState expectedState = CaseOscillatorState.LOWERCASE;
-
+        CaseOscillatorState expectedInitialState = CaseOscillatorState.LOWERCASE;
+        CaseOscillatorState actualInitialState = caseOscillator.getState();
+        Assert.assertEquals(expectedInitialState, actualInitialState);
+        caseOscillator.toggleState();
 
         // when
-        String actualStringToBeEvaluated = caseOscillator.getStringToBeEvaluated();
+        CaseOscillatorState expectedState = CaseOscillatorState.UPPERCASE;
         CaseOscillatorState actualState = caseOscillator.getState();
-
-        // then
-        Assert.assertEquals(expectedStringToBeEvaluated, actualStringToBeEvaluated);
         Assert.assertEquals(expectedState, actualState);
     }
 }

@@ -1,4 +1,4 @@
-package com.stayready.hbcu.basicstringutils;
+package com.stayready.hbcu.stringutils;
 
 import org.junit.Test;
 

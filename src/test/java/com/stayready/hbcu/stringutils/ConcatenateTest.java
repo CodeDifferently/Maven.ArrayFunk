@@ -1,6 +1,6 @@
-package com.stayready.hbcu.basicstringutils;
+package com.stayready.hbcu.stringutils;
 
-import com.stayready.hbcu.BasicStringUtils;
+import com.stayready.hbcu.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,7 +22,7 @@ public class ConcatenateTest {
 
     private void test(String string1, String string2, String expectedString) {
         // when
-        String actualString = BasicStringUtils.concatentate(string1, string2);
+        String actualString = StringUtils.concatentate(string1, string2);
 
         // then
         Assert.assertEquals(expectedString, actualString);

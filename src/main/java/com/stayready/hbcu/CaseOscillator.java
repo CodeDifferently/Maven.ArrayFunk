@@ -36,7 +36,7 @@ public class CaseOscillator {
      * @param  -
      * @return identical string with oscillating casing
      */
-    public String camelCase() {
+    public String changeCase() {
         StringBuilder sb = new StringBuilder();
         String stringToBeEvaluated = this.stringToBeEvaluated.toLowerCase();
         char[] characters = stringToBeEvaluated.toCharArray();
@@ -47,6 +47,6 @@ public class CaseOscillator {
     }
 
     public static void main(String[] args) {
-        System.out.println(new CaseOscillator("The quick brown fox").camelCase());
+        System.out.println(new CaseOscillator("The quick brown fox").changeCase());
     }
 }

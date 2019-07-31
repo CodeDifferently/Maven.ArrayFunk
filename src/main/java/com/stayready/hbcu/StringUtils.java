@@ -1,6 +1,6 @@
 package com.stayready.hbcu;
 
-public class BasicStringUtils {
+public class StringUtils {
     /**
      * @param string1 - Base string to be added to
      * @param string2 - String to add to `string1`

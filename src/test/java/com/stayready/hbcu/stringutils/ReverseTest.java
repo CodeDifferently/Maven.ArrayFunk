@@ -1,6 +1,6 @@
-package com.stayready.hbcu.basicstringutils;
+package com.stayready.hbcu.stringutils;
 
-import com.stayready.hbcu.BasicStringUtils;
+import com.stayready.hbcu.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -27,7 +27,7 @@ public class ReverseTest {
 
     private void test(String string, String expectedString) {
         // when
-        String actualString = BasicStringUtils.reverse(string);
+        String actualString = StringUtils.reverse(string);
 
         // then
         Assert.assertEquals(expectedString, actualString);

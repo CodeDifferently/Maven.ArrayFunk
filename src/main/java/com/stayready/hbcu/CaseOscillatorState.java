@@ -2,6 +2,9 @@ package com.stayready.hbcu;
 
 import java.util.function.Function;
 
+/**
+ * ATTENTION TO STUDENTS - You are advised AGAINST modifying this class
+ */
 public enum CaseOscillatorState {
     LOWERCASE(character -> character.toString().toLowerCase().charAt(0)),
     UPPERCASE(character -> character.toString().toUpperCase().charAt(0));

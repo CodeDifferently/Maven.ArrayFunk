@@ -1,6 +1,6 @@
-package com.stayready.hbcu.basicstringutils;
+package com.stayready.hbcu.stringutils;
 
-import com.stayready.hbcu.BasicStringUtils;
+import com.stayready.hbcu.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -27,7 +27,7 @@ public class RemoveCharactersThenReverseTest {
 
     private void test(String stringToManipulate, String charactersToRemove, String expected) {
         // when
-        String actual = BasicStringUtils.removeCharactersThenReverse(stringToManipulate, charactersToRemove);
+        String actual = StringUtils.removeCharactersThenReverse(stringToManipulate, charactersToRemove);
 
         // then
         Assert.assertEquals(expected, actual);
