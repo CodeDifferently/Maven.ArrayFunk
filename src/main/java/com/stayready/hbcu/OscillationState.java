@@ -15,7 +15,7 @@ public enum OscillationState {
         this.caseMethod = caseMethod;
     }
 
-    public Character oscilate(Character character) {
+    public Character oscillate(Character character) {
         return caseMethod.apply(character);
     }
 
